@@ -9,11 +9,6 @@ import './app.css'
 
 
 export default class App extends Component {
-
-    constructor() {
-        super();
-        this.updateChar();
-    }
     
     RandomChar = new RandomChar();
     gotService = new gotService();
@@ -29,14 +24,6 @@ export default class App extends Component {
             };
         });
     };
-
-    updateChar = () => {
-        const id = Math.round(Math.random() * 1000 + 100);
-        // макс и мин значение 
-        this.gotService.getCharacter(id)
-            .then((this.onCharLoaded))
-            .catch(this.onError)
-    }
 
     render() {
         const {showView} = this.state 
