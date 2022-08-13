@@ -4,14 +4,12 @@ import Header from '../header';
 import RandomChar from '../randomChar';
 import ItemList from '../itemList';
 import CharDetails from '../charDetails';
-import gotService from '../../services/gotService'; 
 import './app.css'
 
 
 export default class App extends Component {
     
     RandomChar = new RandomChar();
-    gotService = new gotService();
     
     state = {
         showView: true
